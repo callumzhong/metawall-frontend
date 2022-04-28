@@ -1,19 +1,31 @@
+import { Link } from 'react-router-dom';
 import Button from 'stories/modules/button/Button';
 import Input from 'stories/modules/input/Input';
 import Logo from 'stories/modules/logo/Logo';
 
 const LoginForm = (props) => {
 	return (
-		<div>
+		<div className='text-center'>
 			<Logo>
-				<p className='font-bold font-helvetica text-2xl leading-[29px]'>
+				<span className='mb-9 inline-block font-helvetica text-2xl font-bold leading-[2.0625rem]'>
 					到元宇宙展開全新社交圈
-				</p>
+				</span>
 			</Logo>
-			<form>
+			<form className='leading-none'>
 				<Input className='mb-4' type='text' placeholder='Email' />
 				<Input className='mb-8' type='password' placeholder='Password' />
-				<Button className='text-white bg-dark-blue w-full'>登入</Button>
+				<Button
+					mode='shadow'
+					className='mb-4 w-full bg-dark-blue font-bold text-white'
+				>
+					登入
+				</Button>
+				<Link
+					className='inline-block font-azeret leading-[1.375rem]'
+					to='/register'
+				>
+					註冊帳號
+				</Link>
 			</form>
 		</div>
 	);

@@ -1,13 +1,18 @@
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-const Logo = ({ className, ...props }) => {
+const Logo = (props) => {
 	return (
-		<div className={clsx('mb-9 text-center', className)}>
-			<h1 className='font-paytone text-6xl leading-[1.4] text-dark-blue'>
+		<>
+			<h1
+				className={clsx(
+					'font-paytone text-6xl leading-[1.4] text-dark-blue',
+					props.className,
+				)}
+			>
 				MetaWall
 			</h1>
 			{props.children}
-		</div>
+		</>
 	);
 };
 

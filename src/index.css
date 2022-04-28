@@ -82,7 +82,6 @@
 			local('Segoe UI Bold Italic'), local('Ubuntu Bold Italic'),
 			local('Roboto-BoldItalic'), local('DroidSans-Bold'), local('Tahoma Bold');
 	}
-
 	body {
 		font-family: 'Noto Sans TC', system-ui;
 		background-color: #efece7;
