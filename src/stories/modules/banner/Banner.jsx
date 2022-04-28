@@ -1,9 +1,11 @@
+import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import imgSvg from '../../assets/login.svg';
-const Banner = (props) => {
+import imgSvg from 'stories/assets/login.svg';
+
+const Banner = ({ className, ...props }) => {
 	return (
 		<img
-			className={`block ${props.className || ''}`}
+			className={clsx('block', className)}
 			src={props.src || imgSvg}
 			alt={props.alt || 'the login'}
 		/>
