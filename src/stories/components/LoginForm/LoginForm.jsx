@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Button from 'stories/modules/button/Button';
+import ErrorMessage from 'stories/modules/errorMessage/ErrorMessage';
 import Input from 'stories/modules/input/Input';
 import Logo from 'stories/modules/logo/Logo';
 
@@ -15,7 +16,9 @@ const LoginForm = (props) => {
 				<Input className='mb-4' type='text' placeholder='Email' />
 				<Input className='mb-8' type='password' placeholder='Password' />
 				{true && (
-					<p className='mb-4 text-froly'>帳號或密碼錯誤，請重新輸入！</p>
+					<ErrorMessage className='mb-4'>
+						帳號或密碼錯誤，請重新輸入！
+					</ErrorMessage>
 				)}
 				<Button
 					mode='shadow'

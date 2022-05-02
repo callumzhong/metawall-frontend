@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 const styles = {
 	shadow: 'shadow-[-2px_2px_0px_#000400] border-2 border-black',
+	outline: 'border-2 border-[#808080]',
 };
 
 const Button = ({ className, mode, ...props }) => {
