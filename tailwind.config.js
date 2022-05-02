@@ -46,6 +46,9 @@ module.exports = {
 				paytone: ["'Paytone One'", ...defaultTheme.fontFamily.sans],
 				helvetica: ["'Helvetica Neue'", ...defaultTheme.fontFamily.sans],
 			},
+			width: {
+				main: '60.3472%',
+			},
 		},
 	},
 	plugins: [require('tailwindcss-debug-screens')],

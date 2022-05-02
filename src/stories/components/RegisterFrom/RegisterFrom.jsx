@@ -6,38 +6,40 @@ import Logo from 'stories/modules/logo/Logo';
 
 const RegisterFrom = (props) => {
 	return (
-		<div className='text-center'>
-			<Logo>
-				<span className='mb-9 inline-block font-helvetica text-2xl font-bold leading-[2.0625rem]'>
-					註冊
-				</span>
-			</Logo>
+		<div className='w-full text-center'>
+			<Logo size='lg' />
+			<p className='mb-9 inline-block font-helvetica text-2xl font-bold leading-[2.0625rem]'>
+				註冊
+			</p>
 			<form className='leading-none'>
-				<Input className='mb-4' type='text' placeholder='暱稱' />
-				{true && (
-					<ErrorMessage className='mb-4 -mt-3'>
+				<label>
+					<Input className='peer mb-1' type='text' placeholder='暱稱' />
+					<ErrorMessage className='invisible mb-4 peer-invalid:visible'>
 						暱稱至少 2 個字元以上
 					</ErrorMessage>
-				)}
-				<Input className='mb-4' type='text' placeholder='Email' />
-				{true && (
-					<ErrorMessage className='mb-4 -mt-3'>
+				</label>
+				<label>
+					<Input className='peer mb-1' type='text' placeholder='Email' />
+					<ErrorMessage className='invisible mb-4 peer-invalid:visible'>
 						帳號已被註冊，請替換新的 Email！
 					</ErrorMessage>
-				)}
-				<Input className='mb-8' type='password' placeholder='Password' />
-				{true && (
-					<ErrorMessage className='mb-8 -mt-7'>
+				</label>
+				<label>
+					<Input className='peer mb-1' type='password' placeholder='Password' />
+					<ErrorMessage className='invisible mb-8 peer-invalid:visible'>
 						密碼需至少 8 碼以上，並中英混合
 					</ErrorMessage>
-				)}
+				</label>
 				<Button
 					mode='outline'
 					className='mb-4 w-full bg-gray font-bold text-white'
 				>
 					註冊
 				</Button>
-				<Link className='inline-block font-azeret leading-[1.375rem]' to='/'>
+				<Link
+					className='inline-block font-azeret leading-[1.375rem]'
+					to='/login'
+				>
 					登入
 				</Link>
 			</form>
