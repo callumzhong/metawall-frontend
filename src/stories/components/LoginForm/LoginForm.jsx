@@ -14,6 +14,9 @@ const LoginForm = (props) => {
 			<form className='leading-none'>
 				<Input className='mb-4' type='text' placeholder='Email' />
 				<Input className='mb-8' type='password' placeholder='Password' />
+				{true && (
+					<p className='mb-4 text-froly'>帳號或密碼錯誤，請重新輸入！</p>
+				)}
 				<Button
 					mode='shadow'
 					className='mb-4 w-full bg-dark-blue font-bold text-white'
