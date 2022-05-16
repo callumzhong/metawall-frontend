@@ -17,7 +17,6 @@ const SubmitText = ({
 	const formSubmitHandler = (event) => {
 		event.preventDefault();
 	};
-	console.log(placeholder);
 	return (
 		<form
 			onSubmit={formSubmitHandler}
