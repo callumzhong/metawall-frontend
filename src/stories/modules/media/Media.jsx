@@ -10,7 +10,12 @@ const Media = ({
 	...props
 }) => {
 	return (
-		<div className={`flex items-center ${className || ''}`}>
+		<div
+			className={`flex flex-row-reverse items-center justify-end ${
+				className || ''
+			}`}
+		>
+			{props.children}
 			{imageElement || (
 				<img
 					className='item mr-2 self-start'
@@ -20,7 +25,6 @@ const Media = ({
 					alt={alt}
 				/>
 			)}
-			{props.children}
 		</div>
 	);
 };

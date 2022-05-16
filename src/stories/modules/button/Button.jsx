@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 const styles = {
 	'theme--primary':
-		'bg-dark-blue font-bold text-white hover:bg-golden-dream active:bg-golden-dream hover:text-black active:text-black',
+		'bg-dark-blue font-bold text-white hover:bg-golden-dream hover:text-black',
 	'theme--secondary': 'bg-gray font-bold text-white',
 	'mode--shadow': 'shadow-[-2px_2px_0px_#000400] border-2 border-black',
 	'mode--outline': 'border-2 border-[#808080]',

@@ -1,5 +1,5 @@
 import NewsFeedBlank from 'stories/components/newsFeedBlank/newsFeedBlank';
-import PostNewsFeed from 'stories/components/postnewsFeed/PostNewsFeed';
+import PostNewsFeed from 'stories/components/postNewsFeed/PostNewsFeed';
 import SearchBar from 'stories/components/searchBar/SearchBar';
 import PageLayout from 'stories/layouts/PageLayout';
 
