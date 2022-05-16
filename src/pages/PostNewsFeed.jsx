@@ -1,4 +1,4 @@
-import PostNewsFeed from 'stories/components/postNewsFeed/PostNewsFeed';
+import PostSidebar from 'stories/components/postSidebar/PostSidebar';
 import PageLayout from 'stories/layouts/PageLayout';
 import DoubleLayer from 'stories/modules/doubleLayer/DoubleLayer';
 
@@ -13,7 +13,7 @@ const PostNewsFeedPage = () => {
 					張貼動態
 				</DoubleLayer>
 			</div>
-			<PostNewsFeed />
+			<PostSidebar />
 		</PageLayout>
 	);
 };

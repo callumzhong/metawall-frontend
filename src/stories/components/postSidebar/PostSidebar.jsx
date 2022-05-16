@@ -5,7 +5,7 @@ import userImage from 'stories/assets/user.png';
 import Button from 'stories/modules/button/Button';
 import Card from 'stories/modules/card/Card';
 import Media from 'stories/modules/media/Media';
-const PostNewsFeed = ({ mode, className, ...props }) => {
+const PostSidebar = ({ mode, className, ...props }) => {
 	return (
 		<Card position='sticky-lg' className='flex-[0.3867] px-6 py-8'>
 			<Button
@@ -73,4 +73,4 @@ const PostNewsFeed = ({ mode, className, ...props }) => {
 	);
 };
 
-export default PostNewsFeed;
+export default PostSidebar;

@@ -1,5 +1,5 @@
 import NewsFeedBlank from 'stories/components/newsFeedBlank/newsFeedBlank';
-import PostNewsFeed from 'stories/components/postNewsFeed/PostNewsFeed';
+import PostSidebar from 'stories/components/postSidebar/PostSidebar';
 import SearchBar from 'stories/components/searchBar/SearchBar';
 import PageLayout from 'stories/layouts/PageLayout';
 
@@ -15,7 +15,7 @@ const HomePage = (props) => {
 					<NewsFeedBlank />
 				</div>
 			</div>
-			<PostNewsFeed />
+			<PostSidebar />
 		</PageLayout>
 	);
 };
