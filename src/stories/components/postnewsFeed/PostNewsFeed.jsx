@@ -9,6 +9,8 @@ const PostNewsFeed = ({ mode, className, ...props }) => {
 	return (
 		<Card position='sticky-lg' className='flex-[0.3867] px-6 py-8'>
 			<Button
+				tag='link'
+				to='/post'
 				theme='primary'
 				mode='shadow'
 				type='submit'

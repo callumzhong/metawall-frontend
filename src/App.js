@@ -1,13 +1,15 @@
-import Home from 'pages/Home';
-import Login from 'pages/Login';
-import Register from 'pages/Register';
+import HomePage from 'pages/Home';
+import LoginPage from 'pages/Login';
+import PostNewsFeedPage from 'pages/PostNewsFeed';
+import RegisterPage from 'pages/Register';
 import { Route, Routes } from 'react-router-dom';
 function App() {
 	return (
 		<Routes>
-			<Route path='/' element={<Home />} />
-			<Route path='/login' element={<Login />} />
-			<Route path='/register' element={<Register />} />
+			<Route path='/' element={<HomePage />} />
+			<Route path='/post' element={<PostNewsFeedPage />} />
+			<Route path='/login' element={<LoginPage />} />
+			<Route path='/register' element={<RegisterPage />} />
 		</Routes>
 	);
 }

@@ -2,7 +2,7 @@ import RegisterFrom from 'stories/components/registerFrom/RegisterFrom';
 import SignInLayout from 'stories/layouts/SignInLayout';
 import LoginBanner from 'stories/modules/loginBanner/loginBanner';
 
-const Register = (props) => {
+const RegisterPage = (props) => {
 	return (
 		<SignInLayout>
 			<LoginBanner className='hidden lg:block' />
@@ -11,4 +11,4 @@ const Register = (props) => {
 	);
 };
 
-export default Register;
+export default RegisterPage;

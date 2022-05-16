@@ -3,7 +3,7 @@ import PostNewsFeed from 'stories/components/postNewsFeed/PostNewsFeed';
 import SearchBar from 'stories/components/searchBar/SearchBar';
 import PageLayout from 'stories/layouts/PageLayout';
 
-const Home = (props) => {
+const HomePage = (props) => {
 	return (
 		<PageLayout>
 			<div className='flex-[0.6133]'>
@@ -20,4 +20,4 @@ const Home = (props) => {
 	);
 };
 
-export default Home;
+export default HomePage;

@@ -10,9 +10,7 @@ const Select = ({ mode, className, ...props }) => {
 		<select
 			className={clsx(styles.select, classes[`mode--${mode}`], className)}
 			{...props}
-		>
-			{props.children}
-		</select>
+		/>
 	);
 };
 

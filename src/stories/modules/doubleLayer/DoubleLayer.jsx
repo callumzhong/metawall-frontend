@@ -7,15 +7,13 @@ const classes = {
 		'border-2 border-black shadow-[4px_4px_0px_white,4px_4px_0px_1.5px_#000400]',
 };
 
-const DoubleLayer = ({ tag, mode, className, children, ...props }) => {
+const DoubleLayer = ({ tag, mode, className, ...props }) => {
 	const DynamicTagName = tag;
 	return (
 		<DynamicTagName
 			className={clsx(classes[`mode--${mode}`], className)}
 			{...props}
-		>
-			{children}
-		</DynamicTagName>
+		/>
 	);
 };
 
