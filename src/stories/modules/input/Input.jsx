@@ -1,19 +1,23 @@
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-const Input = ({ className, ...props }) => {
+
+const classes = {
+	'mode--base': 'w-full border-2 border-black px-6 leading-[2.9375rem]',
+	'mode--icon': 'w-full border-2 border-black px-6 leading-[2.625rem]',
+};
+
+const Input = ({ mode, className, ...props }) => {
 	return (
-		<input
-			className={clsx(
-				' w-full border-2 border-black px-6 leading-[2.9375rem]',
-				className,
-			)}
-			{...props}
-		/>
+		<input className={clsx(classes[`mode--${mode}`], className)} {...props} />
 	);
 };
 
+Input.defaultProps = {
+	mode: 'base',
+};
+
 Input.propTypes = {
-	className: PropTypes.string,
+	mode: PropTypes.oneOf(['base', 'icon']),
 };
 
 export default Input;

@@ -13,26 +13,39 @@ const RegisterFrom = (props) => {
 			</p>
 			<form className='leading-none'>
 				<label>
-					<Input className='peer mb-1' type='text' placeholder='暱稱' />
-					<ErrorMessage className='invisible mb-4 peer-invalid:visible'>
-						暱稱至少 2 個字元以上
-					</ErrorMessage>
+					<Input
+						className='peer mb-4'
+						type='text'
+						placeholder='暱稱'
+						required
+					/>
+					{false && (
+						<ErrorMessage className='invisible mb-4 peer-invalid:visible'>
+							暱稱至少 2 個字元以上
+						</ErrorMessage>
+					)}
 				</label>
 				<label>
-					<Input className='peer mb-1' type='text' placeholder='Email' />
-					<ErrorMessage className='invisible mb-4 peer-invalid:visible'>
-						帳號已被註冊，請替換新的 Email！
-					</ErrorMessage>
+					<Input className='peer mb-4' type='text' placeholder='Email' />
+					{false && (
+						<ErrorMessage className='invisible mb-4 peer-invalid:visible'>
+							帳號已被註冊，請替換新的 Email！
+						</ErrorMessage>
+					)}
 				</label>
 				<label>
-					<Input className='peer mb-1' type='password' placeholder='Password' />
-					<ErrorMessage className='invisible mb-8 peer-invalid:visible'>
-						密碼需至少 8 碼以上，並中英混合
-					</ErrorMessage>
+					<Input className='peer mb-8' type='password' placeholder='Password' />
+					{false && (
+						<ErrorMessage className='invisible mb-8 peer-invalid:visible'>
+							密碼需至少 8 碼以上，並中英混合
+						</ErrorMessage>
+					)}
 				</label>
 				<Button
+					type='submit'
+					theme='secondary'
 					mode='outline'
-					className='mb-4 w-full bg-gray font-bold text-white'
+					className='mb-4 w-full '
 				>
 					註冊
 				</Button>

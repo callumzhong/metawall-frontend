@@ -5,28 +5,28 @@ import Input from 'stories/modules/input/Input';
 import Logo from 'stories/modules/logo/Logo';
 
 const LoginForm = (props) => {
+	const loginSubmitHandler = (e) => {
+		e.preventDefault();
+	};
 	return (
 		<div className='w-full text-center'>
 			<Logo size='lg' />
-			<p className='mb-9 inline-block font-helvetica text-2xl font-bold leading-[2.0625rem]'>
+			<p className='mb-9 inline-block font-helvetica text-2xl font-bold leading-[1.375]'>
 				到元宇宙展開全新社交圈
 			</p>
-			<form className='leading-none'>
-				<label>
-					<Input className='mb-4' type='text' placeholder='Email' />
-				</label>
-				<label>
-					<Input className='mb-8' type='password' placeholder='Password' />
-				</label>
-				{true && (
+			<form className='leading-none' onSubmit={loginSubmitHandler}>
+				<Input className='mb-4' type='text' placeholder='Email' />
+				<Input className='mb-8' type='password' placeholder='Password' />
+				{false && (
 					<ErrorMessage className='mb-4'>
 						帳號或密碼錯誤，請重新輸入！
 					</ErrorMessage>
 				)}
 				<Button
+					theme='primary'
 					mode='shadow'
-					type='button'
-					className='mb-4 w-full bg-dark-blue font-bold text-white'
+					type='submit'
+					className='mb-4 w-full'
 				>
 					登入
 				</Button>

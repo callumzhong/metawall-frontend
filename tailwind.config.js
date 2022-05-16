@@ -7,6 +7,16 @@ module.exports = {
 		debugScreens: {
 			position: ['top', 'left'],
 		},
+		fontSize: {
+			xs: '.75rem',
+			sm: '.875rem',
+			base: '1rem',
+			lg: '1.125rem',
+			xl: '1.25rem',
+			'2xl': '1.5rem',
+			'3xl': '1.625rem',
+			'6xl': '3.75rem',
+		},
 		extend: {
 			colors: {
 				black: '#000400',
@@ -38,6 +48,19 @@ module.exports = {
 					800: '#B30D0F',
 					900: '#7F090B',
 				},
+				dawn: {
+					DEFAULT: '#9B9893',
+					50: '#F3F3F2',
+					100: '#E9E9E8',
+					200: '#D6D5D3',
+					300: '#C2C0BD',
+					400: '#AFACA8',
+					500: '#9B9893',
+					600: '#807C76',
+					700: '#63605B',
+					800: '#454340',
+					900: '#282725',
+				},
 			},
 			fontFamily: {
 				sans: ["'Noto Sans TC'", ...defaultTheme.fontFamily.sans],
@@ -45,9 +68,6 @@ module.exports = {
 				baloo: ["'Baloo Da 2'", ...defaultTheme.fontFamily.sans],
 				paytone: ["'Paytone One'", ...defaultTheme.fontFamily.sans],
 				helvetica: ["'Helvetica Neue'", ...defaultTheme.fontFamily.sans],
-			},
-			width: {
-				main: '60.3472%',
 			},
 		},
 	},

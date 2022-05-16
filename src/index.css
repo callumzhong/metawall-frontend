@@ -6,11 +6,41 @@
 
 	body {
 		background-color: #efece7;
+		color: theme('colors.black');
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%238e8e8e' fill-opacity='0.24'%3E%3Cpath opacity='.8'  d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 		line-height: 1.5;
 	}
 
 	#root {
 		height: 100vh;
+	}
+}
+@layer components {
+	.container {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.stretched-link::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		content: '';
+	}
+
+	@screen md {
+		.container {
+			max-width: 80%;
+		}
+	}
+
+	@screen xl {
+		.container {
+			max-width: 60.3472%;
+		}
 	}
 }

@@ -1,19 +1,22 @@
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 const styles = {
-	shadow: 'shadow-[-2px_2px_0px_#000400] border-2 border-black',
-	outline: 'border-2 border-[#808080]',
+	'theme--primary': 'bg-dark-blue font-bold text-white',
+	'theme--secondary': 'bg-gray font-bold text-white',
+	'mode--shadow': 'shadow-[-2px_2px_0px_#000400] border-2 border-black',
+	'mode--outline': 'border-2 border-[#808080]',
 };
 
-const Button = ({ className, mode, ...props }) => {
+const Button = ({ className, mode, theme, type, ...props }) => {
 	return (
 		<button
 			className={clsx(
 				'rounded-lg text-center font-azeret leading-[3.125rem]',
+				styles[`mode--${mode}`],
+				styles[`theme--${theme}`],
 				className,
-				styles[mode],
 			)}
-			type={props.type}
+			type={type}
 		>
 			{props.children}
 		</button>
@@ -21,8 +24,9 @@ const Button = ({ className, mode, ...props }) => {
 };
 
 Button.prototype = {
-	mode: PropTypes.oneOf('shadow'),
+	theme: PropTypes.oneOf(['primary', 'secondary']),
+	mode: PropTypes.oneOf(['shadow', 'outline']),
 	className: PropTypes.string,
-	children: PropTypes.any,
+	type: PropTypes.oneOf(['submit', 'button']),
 };
 export default Button;
