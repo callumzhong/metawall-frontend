@@ -8,6 +8,7 @@ const classes = {
 	'position--absolute-center':
 		'absolute top-1/2 left-4 right-4 mx-auto -translate-y-1/2',
 	'position--sticky': 'sticky top-14 h-max',
+	'position--sticky-lg': 'lg:sticky top-14 h-max',
 	'backgroundColor--white': 'bg-white',
 	'backgroundColor--light-grayish-orange': 'bg-light-grayish-orange',
 	'borderRadius--lg': 'rounded-lg',
@@ -24,11 +25,11 @@ const Card = ({
 	return (
 		<div
 			className={clsx(
+				className,
 				classes[`mode--${mode}`],
 				classes[`position--${position}`],
 				classes[`backgroundColor--${backgroundColor}`],
 				classes[`borderRadius--${borderRadius}`],
-				className,
 			)}
 		>
 			{props.children}
@@ -42,7 +43,7 @@ Card.defaultProps = {
 };
 Card.propTypes = {
 	mode: PropTypes.oneOf(['base', 'shadow-left', 'shadow-bottom']),
-	position: PropTypes.oneOf(['absolute-center', 'sticky']),
+	position: PropTypes.oneOf(['absolute-center', 'sticky', 'sticky-lg']),
 	backgroundColor: PropTypes.string,
 	className: PropTypes.string,
 	children: PropTypes.any,

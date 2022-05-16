@@ -7,7 +7,7 @@ import Card from 'stories/modules/card/Card';
 import Media from 'stories/modules/media/Media';
 const PostNewsFeed = ({ mode, className, ...props }) => {
 	return (
-		<Card position='sticky' className='flex-[0.3867] px-6 py-8'>
+		<Card position='sticky-lg' className='flex-[0.3867] px-6 py-8'>
 			<Button
 				theme='primary'
 				mode='shadow'
