@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
-import Button from 'stories/modules/button/Button';
+import Button, {
+	ButtonFontFamily,
+	ButtonMode,
+	ButtonTheme,
+} from 'stories/modules/button/Button';
 import ErrorMessage from 'stories/modules/errorMessage/ErrorMessage';
 import Input from 'stories/modules/input/Input';
 import Logo from 'stories/modules/logo/Logo';
@@ -23,10 +27,11 @@ const LoginForm = (props) => {
 					</ErrorMessage>
 				)}
 				<Button
-					theme='primary'
-					mode='shadow'
+					theme={ButtonTheme.primary}
+					mode={ButtonMode.shadow}
+					fontFamily={ButtonFontFamily.azeret}
 					type='submit'
-					className='mb-4 w-full'
+					className='mb-4'
 				>
 					登入
 				</Button>

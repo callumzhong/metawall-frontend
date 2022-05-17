@@ -1,5 +1,6 @@
-import Search from 'stories/modules/search/Search';
+import { ReactComponent as IconSearch } from 'stories/assets/search.svg';
 import Select from 'stories/modules/select/select';
+import SubmitText from 'stories/modules/submitText/SubmitText';
 
 const SearchBar = ({ mode, className, ...props }) => {
 	return (
@@ -8,11 +9,13 @@ const SearchBar = ({ mode, className, ...props }) => {
 				<option value='des'>最新貼文</option>
 				<option value='des'>最新貼文</option>
 			</Select>
-			<Search className='flex-[0.6848]' />
+			<SubmitText
+				placeholder='搜尋貼文'
+				buttonContent={<IconSearch width={20} height={20} color='white' />}
+				className='flex-[0.6848]'
+			/>
 		</div>
 	);
 };
-
-SearchBar.propTypes = {};
 
 export default SearchBar;

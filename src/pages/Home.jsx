@@ -1,9 +1,9 @@
 import NewsFeed from 'stories/components/newsFeed/NewsFeed';
-import PostNewsFeed from 'stories/components/postnewsFeed/PostNewsFeed';
+import PostSidebar from 'stories/components/postSidebar/PostSidebar';
 import SearchBar from 'stories/components/searchBar/SearchBar';
 import PageLayout from 'stories/layouts/PageLayout';
 
-const Home = (props) => {
+const HomePage = (props) => {
 	return (
 		<PageLayout>
 			<div className='flex-[0.6133]'>
@@ -12,11 +12,12 @@ const Home = (props) => {
 					{new Array(10).fill(0).map((i, idx) => (
 						<NewsFeed key={idx} />
 					))}
+					{/* <NewsFeedBlank /> */}
 				</div>
 			</div>
-			<PostNewsFeed />
+			<PostSidebar />
 		</PageLayout>
 	);
 };
 
-export default Home;
+export default HomePage;
