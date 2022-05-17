@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Button from 'stories/modules/button/Button';
+import Button, { ButtonMode, ButtonTheme } from 'stories/modules/button/Button';
 import ErrorMessage from 'stories/modules/errorMessage/ErrorMessage';
 import Input from 'stories/modules/input/Input';
 import Logo from 'stories/modules/logo/Logo';
@@ -43,9 +43,9 @@ const RegisterFrom = (props) => {
 				</label>
 				<Button
 					type='submit'
-					theme='secondary'
-					mode='outline'
-					className='mb-4 w-full '
+					theme={ButtonTheme.secondary}
+					mode={ButtonMode.outline}
+					className='mb-4'
 				>
 					註冊
 				</Button>

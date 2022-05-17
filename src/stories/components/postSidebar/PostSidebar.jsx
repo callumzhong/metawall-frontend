@@ -2,19 +2,22 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as IconBell } from 'stories/assets/bell.svg';
 import { ReactComponent as IconThumbUp } from 'stories/assets/thumb-up.svg';
 import userImage from 'stories/assets/user.png';
-import Button from 'stories/modules/button/Button';
-import Card from 'stories/modules/card/Card';
+import Button, { ButtonMode, ButtonTheme } from 'stories/modules/button/Button';
+import Card, { CardPosition } from 'stories/modules/card/Card';
 import Media from 'stories/modules/media/Media';
 const PostSidebar = ({ mode, className, ...props }) => {
 	return (
-		<Card position='sticky-lg' className='flex-[0.3867] px-6 py-8'>
+		<Card
+			position={CardPosition['sticky-lg']}
+			className='flex-[0.3867] px-6 py-8'
+		>
 			<Button
 				tag='link'
 				to='/post'
-				theme='primary'
-				mode='shadow'
+				theme={ButtonTheme.primary}
+				mode={ButtonMode.shadow}
 				type='submit'
-				className='mb-4 w-full'
+				className='mb-4'
 			>
 				張貼動態
 			</Button>

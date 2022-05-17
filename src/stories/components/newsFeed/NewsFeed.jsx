@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types';
 import userImage from 'stories/assets/user.png';
-import Card from 'stories/modules/card/Card';
+import Card, { CardBorderRadius, CardMode } from 'stories/modules/card/Card';
 import Media from 'stories/modules/media/Media';
 import PostMessage from '../postMessage/PostMessage';
 
 const NewsFeed = ({ mode, className, ...props }) => {
 	return (
-		<Card mode='shadow-bottom' borderRadius='lg' className='p-6'>
+		<Card
+			mode={CardMode['shadow-bottom']}
+			borderRadius={CardBorderRadius.lg}
+			className='p-6'
+		>
 			<Media image={userImage} width={45}>
 				<div className='mb-4'>
 					<div className='font-bold'>邊緣小杰</div>
