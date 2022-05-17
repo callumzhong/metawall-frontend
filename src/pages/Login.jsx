@@ -1,13 +1,13 @@
 import LoginForm from 'stories/components/loginForm/LoginForm';
-import SignInLayout from 'stories/layouts/SignInLayout';
+import LoginLayout from 'stories/layouts/LoginLayout';
 import LoginBanner from 'stories/modules/loginBanner/loginBanner';
 
 const LoginPage = () => {
 	return (
-		<SignInLayout>
+		<LoginLayout>
 			<LoginBanner className='hidden lg:block' />
 			<LoginForm />
-		</SignInLayout>
+		</LoginLayout>
 	);
 };
 
