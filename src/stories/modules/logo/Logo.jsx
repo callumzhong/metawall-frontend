@@ -1,8 +1,4 @@
 import PropTypes from 'prop-types';
-// const classes = {
-// 	'size--lg': 'text-6xl leading-[1.4] text-dark-blue',
-// 	'size--md': 'text-[1.625rem] leading-9 black',
-// };
 const Logo = ({ size }) => {
 	if (size === 'lg') {
 		return (
