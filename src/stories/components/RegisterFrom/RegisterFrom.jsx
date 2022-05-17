@@ -43,7 +43,7 @@ const RegisterFrom = (props) => {
 				</label>
 				<Button
 					type='submit'
-					theme={ButtonTheme.secondary}
+					theme={ButtonTheme['gray']}
 					mode={ButtonMode.outline}
 					className='mb-4'
 				>

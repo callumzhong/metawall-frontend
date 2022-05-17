@@ -67,7 +67,7 @@ DoubleLayer.propTypes = {
 	mode: PropTypes.oneOf(Object.values(DoubleLayerMode)),
 	position: PropTypes.oneOf(Object.values(DoubleLayerPosition)),
 	theme: PropTypes.oneOf(Object.values(DoubleLayerTheme)),
-	size: PropTypes.oneOf(Object.values(DoubleLayerTheme)),
+	size: PropTypes.oneOf(Object.values(DoubleLayerSize)),
 	fontFamily: PropTypes.oneOf(Object.values(DoubleLayerFontFamily)),
 	className: validClassNameHandler(/w|p|m/, 'only w-* , p-*, m-*'),
 };
